@@ -1,0 +1,33 @@
+14:48:14.647 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js
+14:48:16.576 request:
+1 > POST http://dummy.restapiexample.com/api/v1/create
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 41
+1 > Content-Type: text/plain; charset=UTF-8
+1 > Host: dummy.restapiexample.com
+1 > User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_202)
+{"name":"test","salary":"123","age":"23"}
+
+14:48:17.843 response time in milliseconds: 1263.99
+1 < 200
+1 < Access-Control-Allow-Origin: *
+1 < Access-Control-Expose-Headers: Content-Type, X-Requested-With, X-authentication, X-client
+1 < Cache-Control: no-store, no-cache, must-revalidate
+1 < Content-Length: 77
+1 < Content-Type: application/json;charset=utf-8
+1 < Date: Thu, 23 Apr 2020 09:18:17 GMT
+1 < Expires: Thu, 19 Nov 1981 08:52:00 GMT
+1 < Host-Header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 < Pragma: no-cache
+1 < Referrer-Policy: 
+1 < Response: 200
+1 < Server: nginx/1.16.0
+1 < Set-Cookie: [PHPSESSID=889f6d8d4194d48faf0ef6cd678e285c; path=/, ezoadgid_133674=-1; Path=/; Domain=restapiexample.com; Expires=Thu, 23 Apr 2020 09:48:16 UTC, ezoref_133674=; Path=/; Domain=restapiexample.com; Expires=Thu, 23 Apr 2020 11:18:16 UTC, ezoab_133674=mod28-c; Path=/; Domain=restapiexample.com; Expires=Thu, 23 Apr 2020 11:18:16 UTC, active_template::133674=pub_site.1587633496; Path=/; Domain=restapiexample.com; Expires=Sat, 25 Apr 2020 09:18:16 UTC]
+1 < Vary: [Accept-Encoding, Accept-Encoding,X-APP-JSON]
+1 < X-Ezoic-Cdn: Miss
+1 < X-Middleton-Response: 200
+1 < X-Sol: pub_site
+{"status":"success","data":{"name":"test","salary":"123","age":"23","id":52}}
+
+14:48:17.987 assertion failed: path: $.status, actual: 'success', expected: 'success1', reason: not equal
